@@ -1,0 +1,209 @@
+/* .ui-widget-header .pui-inputtext, .ui-widget-content .pui-inputtext { */
+/*     background: none repeat scroll 0 0 #FFFFFF !important; */
+/*     font-weight: normal; */
+/* } */
+/* .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br { */
+/*     border-bottom-right-radius: 0px; */
+/* } */
+/* .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl { */
+/*     border-bottom-left-radius: 0px; */
+/* } */
+/* .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr { */
+/*     border-top-right-radius: 0px; */
+/* } */
+/* .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl { */
+/*     border-top-left-radius: 0; */
+/* } */
+
+/*file upload*/
+
+/* input[type="file"] */
+/* { */
+/* 	width: 400px; */
+/* 	height: 34px; */
+/* 	opacity: 0; */
+/* 	z-index: 5; */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	cursor: pointer; */
+/* } */
+
+input[type="file"]:hover ~ #search_file
+{
+	border: 1px solid #002C53;
+}
+
+/* fixed */
+* {
+	font: normal 12px 'Calibri';
+}
+
+body{
+	background-color: aliceblue;
+}
+
+input[type="text"],
+input[type="password"],
+textarea
+{
+	width: 150px;
+	padding: 4px 10px;
+	border: 2px solid #3B4959;
+	border-radius: 4px;
+	position: relative;
+	color: #666;
+}
+
+select
+{
+	width: 172px;
+	padding: 4px 10px;
+	border: 2px solid #3B4959;
+	border-radius: 4px;
+	position: relative;
+	color: #666;
+}
+
+.btnSimple, .btnBusquedaNormal, .btnGuardar, .btnCancelar, .btnNuevo,
+.btnRegresar, .btnLimpiar, .btnMostrarBusquedaAvanzada, .btnIrBusqueda
+{
+	display: inline-block;
+	-webkit-box-shadow: rgba(0,0,0,0.98) 0 1px 0 0;
+	-moz-box-shadow: rgba(0,0,0,0.98) 0 1px 0 0;
+	box-shadow: rgba(0,0,0,0.98) 0 1px 0 0;
+	border: 1px solid #002C53;
+	color: #FFF;
+	padding: 3px 20px;
+	width: 120px;
+	border-radius: 4px;
+	cursor: pointer;
+	background-color: #002C53;
+	font-weight: bold;
+}
+.btnSimple:hover, .btnBusquedaNormal:hover, .btnGuardar:hover, .btnCancelar:hover, .btnNuevo:hover,
+.btnRegresar:hover, .btnLimpiar:hover, .btnMostrarBusquedaAvanzada:hover, .btnIrBusqueda:hover
+{
+	background-color: #016AA3;
+	color: #FFF;
+}
+
+.ui-jqgrid-btable .btnSimple{
+	padding: 0px 0px;
+	width: 40px;
+}
+
+.disabled-row{
+	background-color: #f2f2f2;
+	background-image: none;
+	color:#8a8a8a;
+}
+.ui-datepicker {
+	width: 16em;
+	font-size: 13px !important;
+}
+
+.ui-widget-content.jqgrow.ui-row-ltr.ui-state-highlight{
+	background-color: #016AA3 !important;
+	background: #016AA3 !important;
+	color: #ffffff !important; 
+}
+
+.pui-galleria-filmstrip{
+	z-index: 100;
+}
+
+/* .pui-notify { */
+/* 	position: fixed; */
+/* 	width: 100%; */
+/* 	 height: 75px; */
+/* 	display: none; */
+/* 	padding: 10px; */
+/* 	background: url("/siguoweb/images/background.png") repeat-x scroll 50% bottom;AGREGADO */
+/* } */
+/* .pui-button-icon-only {  */
+/*     width: 2.4em; */
+/* 	background: none repeat scroll 0 0 transparent !important;  */
+/*     margin: 3px; */
+/*     border: 0 none !important;  */
+/* } */
+/* body, table{ */
+/* 	font-size: 10px !important; */
+/* } */
+#header{
+	background: url('/siguoweb/images/banner_nuevo.png') no-repeat; 
+	background-size:100%; 
+	padding: 5px 0px 0px 0px; 
+	position: relative;
+	width: 100% !important;
+	height: 100% !important;
+}
+#logoWrapper{
+	width:30%;
+	text-align:left;
+}
+#logo{
+	width: 100%;
+/* 	height: 100%; */
+}
+#userWrapper{
+	position:absolute; 
+	right:0px; 
+	bottom:0px; 
+	height:60px; 
+	overflow:hidden; 
+	color:white !important;
+}
+/* .scrollPanel{ */
+/*   	height: 400px; */
+/* 	overflow: auto; */
+/* 	clear: both; */
+/* } */
+.ui-myicon-download { background-image: url(/siguoweb/images/descargar.gif); height:30px !important; width:30px !important; }
+.ui-myicon-search { background-image: url(/siguoweb/images/search.png) !important; }
+.ui-myicon-add{ background-image: url(/siguoweb/images/add1.png) !important; }
+.ui-myicon-return{ background-image: url(/siguoweb/images/arrow-return.png) !important; }
+.ui-myicon-edit{ background-image: url(/siguoweb/images/edit.png) !important; }
+.ui-myicon-cancel{ background-image: url(/siguoweb/images/cancel2.png) !important; }
+.ui-myicon-save{ background-image: url(/siguoweb/images/save.png) !important; }
+
+.ui-myicon-arrow-4-diag{ background-image: url(/siguoweb/images/arrow-4-diag.png) !important; }.ui-myicon-clear{ background-image: url(/siguoweb/images/edit-clear.png) !important; }
+.ui-myicon-go-find{ background-image: url(/siguoweb/images/find-cyan.png) !important; }
+
+
+.centerTable{
+	margin: 0 auto;
+}
+.tituloSeparador {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+.celdaNombreLargo {
+	padding-right: 24px;
+}
+.horizontalTableSpacer{
+	height: 10px;
+}
+fieldset.busqueda label {
+	padding-left: 10px;
+}
+fieldset.busqueda {
+	margin: 10px 17px;
+}	
+fieldset.busqueda legend{
+	padding-left: 5px; padding-right: 5px;
+}	
+.ui-pg-input {
+	text-align: center;
+}
+.ui-widget-content .ui-icon {
+	background-image: url(images/ui-icons_0073ea_256x240.png);
+}
+
+#obligatorio {
+    color: #409FFF;
+    font-size: 0.9em !important;
+    font-weight: bold;
+    margin: 5px;
+}
+

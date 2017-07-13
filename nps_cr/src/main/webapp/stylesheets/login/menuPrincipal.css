@@ -1,0 +1,242 @@
+div#fondoBody img
+{
+	width: 100%;
+}
+
+div.section#mainBody
+{
+    width: 100%;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 55px;
+}
+
+div#loginArticle
+{
+    float:right;
+    right: 50%;
+    
+    margin-right: 50px;
+    width: 382px;
+    
+    background: rgb(236, 240, 241);
+    
+}
+div#loginArticle h1
+{
+	text-align: left;
+	font-weight: 300;
+	font-size: 65px;
+	margin-bottom: 20px;
+	
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	
+	color: #34495e;
+}
+
+div#loginArticle input
+{
+	font-size: 20px;
+	font-weight: 300;
+	color: #34495e;
+}
+
+div#loginArticle div.loginField
+{
+	width: 85%;
+	height: 43px;
+	
+	margin-left: 7.5%;
+	margin-right: auto;
+	
+	margin-bottom: 17px;
+	
+	background: white;
+}
+
+div#loginArticle div.loginField div
+{
+	float: left;
+	
+	width: 13.5%;
+	height: 100%;
+	
+	background-color: #95a5a6;
+}
+
+div#loginArticle div.loginField input
+{
+	float: right;
+	width: 86.5%;
+	height: 100%;
+	text-align: right;
+	
+	font-weight: 300;
+	
+}
+
+div#loginArticle div.usuario div
+{
+	background-image: url(../../images/pagina_login/SCOP-usuarioIcono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#loginArticle div.password div
+{
+	background-image: url(../../images/pagina_login/SCOP-passwordIcono.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#loginArticle div.password
+{
+	margin-bottom: 40px;
+}
+
+div#loginArticle span
+{
+	font-size: 14px;
+	font-weight: 300;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 10px;
+	
+	color: #34495e;
+}
+
+div#loginArticle div.captchaDiv
+{
+	width: 85%;
+	margin-left: 7.5%;
+	margin-right: auto;
+	height: 44px;
+	
+	margin-bottom: 30px;
+}
+div#loginArticle div.errores
+{
+	width: 85%;
+	margin-left: 7.5%;
+	margin-right: auto;
+	height: 1px;
+	
+	margin-bottom: 30px;
+}
+div#loginArticle div.mensajes
+{
+	width: 85%;
+	margin-left: 7.5%;
+	margin-right: auto;
+	height: 44px;
+	
+	margin-bottom: 30px;
+}
+
+
+
+div#loginArticle div.captchaDiv:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+div#loginArticle div.captchaDiv input
+{
+	float: left;
+	width: 45%;
+	height: 100%;
+}
+
+div#loginArticle div.captchaDiv div.captchaImagen
+{
+	background-color: white;
+	float: right;
+	width: 44%;
+	height: 0%;
+	
+/* 	background-image: url(../images/captchaImage.jpg); */
+/*     background-repeat: no-repeat; */
+    background-position: 7px 4px;
+}
+
+div#loginArticle div.captchaDiv a
+{
+	background-color: #f1c40f;
+	float: right;
+	width: 44px;
+	height: 100%;
+	
+	background-image: url(../../images/pagina_login/refreshImage.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+div#loginArticle a.actionButton
+{
+	width: 85%;
+	text-align: center;
+	height: 44px;
+	
+	margin-left: 7.5%;
+	margin-right: auto;
+	margin-bottom: 20px;
+	
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 44px;
+	color: white;
+	
+	background: rgb(52, 152, 219);
+	
+}
+
+div#loginArticle a.actionButton:hover
+{
+/* 	background: rgb(93, 173, 226); */
+/* background-image: url("../../images/pagina_login/ingresar_a.png"); */
+	
+}
+
+
+div#misionVisionArticle
+{
+	float: left;
+	left: 50%;
+	margin-left: 50px;
+	padding: 30px;
+	
+	width: 350px;
+	
+	background: rgb(0,0,0);
+	color: white;
+	font-weight: 300;
+}
+
+div#misionVisionArticle div.firstDiv
+{
+	margin-bottom: 30px;
+}
+
+div#misionVisionArticle div h1
+{
+	font-size: 40px;
+	font-weight: 300;
+}
+
+div#misionVisionArticle div p
+{
+	font-size: 15px;
+}
+
+p mensajeAlerta {
+	font-family: Arial;
+	font-size: 9pt;
+	color: red;
+}
+
+

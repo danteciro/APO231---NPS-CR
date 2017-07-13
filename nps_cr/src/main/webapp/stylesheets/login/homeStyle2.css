@@ -1,0 +1,203 @@
+html, body { height:100%; }
+
+div#nav
+{
+    position: relative;
+    width: 100%;
+    height: 36px;
+    background: #92BDD0;
+    overflow: visible;
+    z-index: 150;
+}
+
+div#nav h1
+{
+    float: center;
+    margin-top: -5px;
+ 	vertical-align: middle;
+    font-size: 30px;
+    text-align: center;
+    line-height: 100%;
+    font-weight: 300;
+    letter-spacing: -3px;
+    line-height: 40px;
+    color: rgb(0, 84, 139);
+    
+}
+
+div#nav a#opcionesNombre
+{
+    position: relative;
+    float: right;
+    
+    margin-right: 10px;
+	margin-top: 7px;
+	
+    width: 388px;
+    height: 25px;
+    
+    background: rgb(168, 202, 217);
+    
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    padding: 8px 10px;
+    
+    
+    background-image: url(../../images/pagina_login/arrowSesionImage.png);
+    background-repeat: no-repeat;
+    background-position: 93% center;
+}
+
+div#nav a#opcionesNombre:hover
+{
+	background: rgb(179, 209, 222);
+	background-image: url(../../images/pagina_login/arrowSesionImage.png);
+    background-repeat: no-repeat;
+    background-position: 93% center;
+}
+
+
+div#nav  ul
+{
+	position: absolute;
+	width: 408px;
+	
+	top: 48px;
+	right: 10px;
+	
+	z-index: 90;
+	
+	visibility: hidden;
+	
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	-ms-transition: all 0.2s linear;
+	-o-transition: all 0.2s linear;
+	transition: all 0.2s linear;
+	
+}
+div#nav  ul  li
+{
+	background: rgb(255, 255, 255);
+	height: 21px;
+	
+	font-size: 14px;
+	font-weight: 300;
+	
+	color: rgba(52, 73, 94,1.0);
+	text-align: right;
+	padding: 5px 15px;
+
+}
+div#nav ul li div{
+	
+}
+div#nav ul li a{
+	color: rgb(0, 84, 139);
+	height: 100%;
+	width: 100%;
+}
+div#nav ul li a:hover{
+	color: rgb(0, 50, 139);
+}
+
+div#nav ul.listaVisible
+{
+	visibility: visible;
+}
+
+div#nav:after
+{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+div.aside,div.section
+{		
+	font-weight: 300;
+	background: white;
+}
+
+div.aside > h1, div.section > h1
+{
+	text-align: center;
+	font-size: 16px;
+	font-weight: 300;
+	background: #436278;
+	height: 35px;
+	line-height: 35px;
+	color: rgb(236, 240, 241);
+	width: 100%;
+}
+
+div.aside a, div.section a
+{
+	color: white;
+	height: 100%;
+	width: 100%;
+}
+
+div.aside  a:hover, div.section a:hover
+{
+	color: rgb(0, 84, 139);
+} 
+
+div.aside
+{
+	width: 24.7%;
+	background: rgb(146,189,208); 
+}
+
+div.section
+{
+	width: 80%;
+	height: 0 auto;
+}
+
+div.section > div, div.aside > div
+{
+	padding: 10px 10px;
+	font-size: 14px;
+}
+
+div.section > div > h1, div.aside > div > h1
+{
+	font-size: 14px;
+	font-weight: 300;
+}
+
+div.section > div > ul,div.aside > div > ul
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+div.section#aplicacionesSection > div:hover
+{
+	background-color: rgb(179, 209, 222);
+}
+
+div.section#aplicacionesSection > div > ul
+{
+	height: 0px;
+	overflow: hidden;
+	
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+div.section#aplicacionesSection > div > ul.ulVisible
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: auto;
+}
+a#op:hover{
+	cursor: pointer;
+}
+

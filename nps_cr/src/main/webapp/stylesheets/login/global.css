@@ -1,0 +1,113 @@
+
+body,header,section,h1,hgroup
+{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	text-decoration: none;
+	border: none;
+	position: relative;
+}
+
+a,img,div,p,article,span,figure
+{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	border: none;
+	
+}
+
+nav,ul,li,input,aside
+{
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	position: relative;
+	text-decoration: none;
+	border: none;
+	list-style: none;
+	z-index: 9;
+}
+p#error{
+	
+	font-family: 'Open Sans',sans-serif;
+	font-size: 9pt;
+	color: rgb(156,127,5) ;
+	
+}
+
+/* */
+
+body
+{
+    
+    font-family: sans-serif,'Open Sans';
+    
+    min-width: 978px;
+}
+
+body div#fondoBody
+{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	
+	top:0px;
+	left: 0px;
+}
+
+header#mainHeader, div#mainHeader
+{
+	height: 90px;
+	width: 100%;
+	overflow: visible;	
+	background-color: #002C53;	
+	background-image:  url("../../images/pagina_login/navImagen.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	
+}
+
+header#mainHeader a#homeLogo, div#mainHeader a#homeLogo
+{
+	width: 41%;	
+	height: 100%;
+}
+
+header#mainHeader a#homeLogo
+{
+	background-image: url("../images/osinergminLogo.svg");
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	background-size: auto 80%;
+}
+
+div#mainHeader a#homeLogo
+{
+	background-image: none;
+	overflow: hidden;
+	
+	width: 400px;
+}
+
+div#mainHeader a#homeLogo img
+{
+	margin-left: 10px;
+	margin-top: 10px;
+	
+	height: 80%;
+}
+
+header#mainHeader a.botonNav, div#mainHeader a.botonNav
+{
+	float: right;
+	margin-right: 20px;
+	height: 100%;
+	width: 44px;
+	
+	background-repeat: no-repeat;
+	background-position: center center;
+}

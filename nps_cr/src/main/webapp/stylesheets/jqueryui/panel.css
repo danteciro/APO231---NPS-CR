@@ -1,0 +1,17 @@
+.pui-panel .pui-panel-titlebar {
+	background: #016AA3;
+	color: #FFF;
+	border: 2px solid #002C53;
+}
+.pui-panel .pui-panel-subtitlebar {
+	background: #016aa3;
+	color: #FFF;
+	border: 1px solid #0073ea;
+        padding: 2px;
+}
+
+.pui-panel .pui-panel-content {
+	color: #666;
+}
+.pui-subpanel {   
+}

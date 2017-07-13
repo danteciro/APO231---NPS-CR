@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reporteRequisitosProcedimiento" language="groovy" pageWidth="595" pageHeight="842" columnWidth="511" leftMargin="42" rightMargin="42" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="79"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="actividad" class="java.lang.String"/>
+	<parameter name="rubro" class="java.lang.String"/>
+	<parameter name="etapa" class="java.lang.String"/>
+	<parameter name="tramite" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["D:\\reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="jasperNotasProcedimiento" class="java.io.InputStream"/>
+	<parameter name="jasperNotasRequisito" class="java.io.InputStream"/>
+	<parameter name="jasperRequisitos" class="java.io.InputStream"/>
+	<parameter name="jasperPreguntas" class="java.io.InputStream"/>
+	<parameter name="requisitos" class="java.util.List"/>
+	<parameter name="notasRequisitos" class="java.util.List"/>
+	<parameter name="preguntas" class="java.util.List"/>
+	<parameter name="notasProcedimiento" class="java.util.List"/>
+	<parameter name="ruta_imagen" class="java.io.InputStream"/>
+	<parameter name="fechaReporte" class="java.util.Date" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="valorUIT" class="java.lang.String" isForPrompting="false"/>
+	<field name="silencioAdministrativo" class="java.lang.String">
+		<fieldDescription><![CDATA[silencioAdministrativo]]></fieldDescription>
+	</field>
+	<field name="plazoResolver" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[plazoResolver]]></fieldDescription>
+	</field>
+	<field name="costoTramite" class="java.lang.Double">
+		<fieldDescription><![CDATA[costoTramite]]></fieldDescription>
+	</field>
+	<field name="silencioAdministrativoMensaje" class="java.lang.String">
+		<fieldDescription><![CDATA[silencioAdministrativoMensaje]]></fieldDescription>
+	</field>
+	<field name="indicacionLegible" class="java.lang.String">
+		<fieldDescription><![CDATA[indicacionLegible]]></fieldDescription>
+	</field>
+	<field name="indicacionPlazo" class="java.lang.String">
+		<fieldDescription><![CDATA[indicacionPlazo]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="290" splitType="Stretch">
+			<staticText>
+				<reportElement key="staticText" x="0" y="41" width="511" height="20"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[GUÍA DE TRÁMITES Y REQUISITOS DE HIDROCARBUROS LÍQUIDOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="62" width="218" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ACTIVIDADES :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="87" width="218" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[AGENTE Y/O INSTALACIÓN :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="112" width="218" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[ETAPA :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="137" width="218" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[TRÁMITE :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="162" width="218" height="20"/>
+				<textElement/>
+				<text><![CDATA[DERECHO DE TRAMITACIÓN :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" x="0" y="182" width="218" height="20"/>
+				<textElement/>
+				<text><![CDATA[PLAZO A RESOLVER EN DÍAS HÁBILES :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="218" y="162" width="293" height="20"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{costoTramite}.intValue()==0?"Gratuito":"S/. "+$F{costoTramite}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="218" y="182" width="293" height="20"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{plazoResolver}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="246" width="511" height="20"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{silencioAdministrativoMensaje}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="218" y="62" width="293" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{actividad}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="218" y="137" width="293" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{tramite}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="218" y="112" width="293" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{etapa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false">
+				<reportElement key="textField" x="218" y="87" width="293" height="25"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{rubro}]]></textFieldExpression>
+			</textField>
+			<image isUsingCache="true">
+				<reportElement key="image-1" x="0" y="0" width="218" height="40"/>
+				<imageExpression class="java.io.InputStream"><![CDATA[$P{ruta_imagen}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="341" y="0" width="70" height="14" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="7" isBold="false" pdfFontName="Times-Roman"/>
+				</textElement>
+				<text><![CDATA[FECHA IMPRESION:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" pattern="dd MMMMM yyyy" isBlankWhenNull="true">
+				<reportElement x="411" y="0" width="100" height="14"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="19" y="270" width="492" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DESCRIPCIÓN DE REQUISITOS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText" mode="Opaque" x="1" y="270" width="18" height="20" forecolor="#000000" backcolor="#CCCCCC"/>
+				<box>
+					<pen lineWidth="0.75" lineStyle="Solid"/>
+					<topPen lineWidth="0.75" lineStyle="Solid"/>
+					<leftPen lineWidth="0.75" lineStyle="Solid"/>
+					<bottomPen lineWidth="0.75" lineStyle="Solid"/>
+					<rightPen lineWidth="0.75" lineStyle="Solid"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[N°]]></text>
+			</staticText>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="226" width="511" height="20"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{indicacionPlazo}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="1" y="206" width="511" height="20"/>
+				<textElement>
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{indicacionLegible}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="180" splitType="Stretch">
+			<subreport isUsingCache="true">
+				<reportElement key="subreport" x="0" y="0" width="511" height="39"/>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{requisitos})]]></dataSourceExpression>
+				<subreportExpression class="java.io.InputStream"><![CDATA[$P{jasperRequisitos}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport" positionType="Float" x="0" y="39" width="511" height="41" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$P{notasProcedimiento}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{notasProcedimiento})]]></dataSourceExpression>
+				<subreportExpression class="java.io.InputStream"><![CDATA[$P{jasperNotasProcedimiento}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport" positionType="Float" x="0" y="80" width="511" height="40" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$P{notasRequisitos}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{notasRequisitos})]]></dataSourceExpression>
+				<subreportExpression class="java.io.InputStream"><![CDATA[$P{jasperNotasRequisito}]]></subreportExpression>
+			</subreport>
+			<subreport isUsingCache="true">
+				<reportElement key="subreport-1" positionType="Float" x="0" y="120" width="511" height="39" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[!$P{preguntas}.isEmpty()]]></printWhenExpression>
+				</reportElement>
+				<dataSourceExpression><![CDATA[new JRBeanCollectionDataSource($P{preguntas})]]></dataSourceExpression>
+				<subreportExpression class="java.io.InputStream"><![CDATA[$P{jasperPreguntas}]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField-3" positionType="Float" x="0" y="163" width="511" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["(*)Valor UIT referencial actual :"+$P{valorUIT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

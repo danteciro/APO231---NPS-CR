@@ -1,0 +1,28 @@
+
+<div id="header">
+    <div id="logoWrapper">
+        <img id="logo" alt="logo" src="/nps/images/osinergminLogo.png">
+    </div>
+    <div id="userWrapper">
+        <table>
+            <!-- <tr>
+                <td>Nombre Usuario: </td> 
+            </tr>
+            <tr>
+                <td>11/04/2014</td>
+                <td>
+                    <ul id="ulOpciones">
+                        <li><a id="aSalir" onclick="window.close()">Salir</a></li> 
+                    </ul>  
+                </td>
+            </tr> -->
+            <tr>
+                <td>
+                    <ul id="ulOpciones">
+                        <li><a id="aSalir" onclick="window.close()">Salir</a></li> 
+                    </ul>  
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
